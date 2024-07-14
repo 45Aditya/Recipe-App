@@ -41,7 +41,7 @@ header nav form {
     font-size: 18px;
     padding: 10px;
     border-radius: 4px;
-    background: red;
+    background: #f44336;
     cursor: pointer;
     color: #fff;
     transition: background-color 0.2s ease-in-out;
@@ -54,7 +54,65 @@ header nav form {
 .recipe-container {
     text-align: center;
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
 }
+
+.recipe{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1);
+    cursor: pointer;
+    max-width: 400px;
+    color: #000;
+}
+
+.recipe img{
+    height: 300px;
+}
+
+.recipe h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin-block: 3px;
+}
+
+.recipe p{
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.recipe span{
+    font-weight: bold;
+}
+
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px auto;
+    background: #f44336;
+    color: #fff;
+    border: none;
+    
+}
+
+.recipe button:hover{
+    background: #ff5c5c;
+}
+
+/* .recipe:hover{
+    background: blue;
+} */
 
 @media screen and (max-width:600px) {
     header nav{
