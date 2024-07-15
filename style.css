@@ -71,6 +71,11 @@ header nav form {
     cursor: pointer;
     max-width: 400px;
     color: #000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe:hover{
+    transform: scale(1.1);
 }
 
 .recipe img{
@@ -106,7 +111,11 @@ header nav form {
     
 }
 
-.recipe button:hover{
+.searchBtn:hover{
+    background: #ff5c5c;
+}
+
+.recipe button:hover, .recipe-close-btn:hover{
     background: #ff5c5c;
 }
 
@@ -136,4 +145,75 @@ header nav form {
     width: 40%;
     height: 60%;
     font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+
+.recipe-details-content{
+    padding: 30px;
+}
+
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.ingredientList{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.recipeInstructions h3{
+    margin-top: 10px;
+}
+
+.recipeInstructions p{
+    line-height: 30px;
+    white-space: pre-line;
+    margin-top: 8px;
+}
+
+/* .recipeInstructions, .recipeName, */
+
+.recipe-close-btn{
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #f44336;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adding scrollbar to recipe details popup */
+.recipe-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: #b5b5ba;
+    border-radius: 16px;
+    --webkit-border-radius: 16px;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a1a1a1;
+}
+
+body::-webkit-scrollbar-track{
+    background: #ebebeb;
 }
